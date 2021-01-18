@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+echo Making LeanSDK/LeanSDK.github.io build
+
+if [ -z "$1" ]; then
+  BUILD_ENV="production"
+else
+  BUILD_ENV="$1"
+fi
+
+sudo -u "$USER" sh -c "bash ./ember build --environment=${BUILD_ENV}"

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Note: Do not rename this script to "server" because
+# it will conflict with 'ember serve' startup processing.
+
+BOTTOM=$(grep BOTTOM .env | cut -d '=' -f2 | cut -d '#' -f1)
+echo
+
+if [ $BOTTOM = "host" ]; then
+  export APP_PATH=$PWD
+elif [ $BOTTOM = "machine" ]; then
+  export APP_PATH=${PWD/home/hosthome}
+fi
+
+docker run --rm -it \
+  -e APP_PATH=${APP_PATH} \
+  -v ${APP_PATH}:/myapp \
+  -v /myapp/dist \
+  -v /tmp \
+  --name leandoc \
+  --hostname leandoc \
+  -p 4200:4200 -p 7020:7020 -p 7357:7357 \
+  danlynn/ember-cli:3.24.0-node_15.5 \
+  ember serve --watcher=polling
+
+echo
+echo

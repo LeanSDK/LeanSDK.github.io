@@ -68,8 +68,8 @@
   pages:
     - title: "PureMVC Gestalt"
       url: "index"
-    - title: "Facade & Core"
-      url: "facade-and-core"
+    - title: "Facade"
+      url: "facade"
     - title: "Notifications"
       url: "notifications"
     - title: "Commands"

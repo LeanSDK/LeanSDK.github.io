@@ -1,14 +1,197 @@
+- title: "Introduction"
+  url: "toc-heading_introduction"
+  is_heading: true
 - title: "Guides and Tutorials"
-  url: 'index'
-  skip_toc: false
+  url: "index"
+  skip_toc: true
   pages:
-    - title: "Guides"
+    - title: "LeanES Guides"
       url: ""
-
 - title: "Getting Started"
-  url: 'getting-started'
+  url: "getting-started"
+  pages:
+    - title: "How To Use The Guides"
+      url: "index"
+    - title: "Quick Start"
+      url: "quick-start"
+- title: "Tutorial"
+  url: "tutorial"
+  pages:
+    - title: "Simple app"
+      url: "simple-app"
+      pages:
+        - title: "Introduction"
+          url: "index"
+    - title: "Daemon app"
+      url: "daemon-app"
+      pages:
+        - title: "Introduction"
+          url: "index"
+    - title: "RESTful Server"
+      url: "rest-server"
+      pages:
+        - title: "Introduction"
+          url: "index"
+
+- title: "Core Concepts"
+  url: "toc-heading_core-concepts"
+  is_heading: true
+- title: "Object model"
+  url: object-model
   pages:
     - title: "Introduction"
       url: "index"
-    - title: "Editing"
-      url: "editing"
+    - title: "CoreObject"
+      url: "core-object"
+    - title: "MetaObject"
+      url: "meta-object"
+    - title: "Module"
+      url: "module"
+    - title: "Proto"
+      url: "proto"
+    - title: "Mixin"
+      url: "mixin"
+    - title: "StateMachine"
+      url: "state-machine"
+    - title: "Decorators"
+      url: "decorators"
+    - title: "Interfaces"
+      url: "interfaces"
+    - title: "Utils"
+      url: "utils"
+    - title: "Constants"
+      url: "constants"
+    - title: "Plugins & Patches"
+      url: "plugins-and-patches"
+- title: "PureMVC & Clean Architecture"
+  url: puremvc
+  pages:
+    - title: "PureMVC Gestalt"
+      url: "index"
+    - title: "Facade & Core"
+      url: "facade-and-core"
+    - title: "Notifications"
+      url: "notifications"
+    - title: "Commands"
+      url: "commands"
+    - title: "Mediators"
+      url: "mediators"
+    - title: "Proxies"
+      url: "proxies"
+    - title: "Clean Architecture Entities"
+      url: "clean-arch-entities"
+    - title: "Dependency inversion"
+      url: "dependency-inversion"
+- title: "Multitones & Pipes"
+  url: pipes
+  pages:
+    - title: "Pipe"
+      url: "index"
+    - title: "PipeMessage"
+      url: "pipe-message"
+    - title: "Junction"
+      url: "junction"
+    - title: "PipeAwareModule"
+      url: "pipe-aware-module"
+- title: "Application concerns"
+  url: applications
+  pages:
+    - title: "Application"
+      url: "index"
+    - title: "Application types & Goals"
+      url: "app-types"
+    - title: "Application Mediator"
+      url: "app-mediator"
+    - title: "Script command"
+      url: "script-command"
+    - title: "Logging"
+      url: "logging"
+    - title: "Addons in use"
+      url: "addons-in-use"
+
+- title: "Addons"
+  url: "toc-heading_addons"
+  is_heading: true
+- title: "Fs Utils"
+  url: fs-utils
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "Configuration"
+  url: configuration
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "Delayable"
+  url: delayable
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "Mapper"
+  url: mapper
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "RESTful"
+  url: rest
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "Swagger"
+  url: swagger
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "Queryable"
+  url: queryable
+  pages:
+    - title: "How To Use"
+      url: "index"
+- title: "Mongo"
+  url: mongo
+  pages:
+    - title: "How To Use"
+      url: "index"
+
+- title: "Application Development"
+  url: "toc-heading_apps"
+  is_heading: true
+- title: "Simple Example"
+  url: simple-example
+  pages:
+    - title: "Introduction"
+      url: "index"
+- title: "Daemon Example"
+  url: daemon-example
+  pages:
+    - title: "Introduction"
+      url: "index"
+- title: "Server Example"
+  url: server-example
+  pages:
+    - title: "Introduction"
+      url: "index"
+
+- title: "Developer tools"
+  url: "toc-heading_tools"
+  is_heading: true
+- title: "CLI"
+  url: cli
+  pages:
+    - title: "Under Development"
+      url: ""
+
+- title: "Additional Resources"
+  url: "toc-heading_resources"
+  is_heading: true
+- title: "Glossary"
+  url: glossary
+  pages:
+    - title: "CoreObject & Decorators"
+      url: "index"
+    - title: "PureMVC"
+      url: "puremvc"
+    - title: "Clean Architecture"
+      url: "clean-arch"
+    - title: "Application level"
+      url: "app-level"

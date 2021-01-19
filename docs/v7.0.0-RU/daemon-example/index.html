@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="@leansdk/leanes-documentation/config/environment" content="%7B%22modulePrefix%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22trailing-history%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22version%22%3A%227.0.0%2Bf803b1be%22%7D%2C%22guidemaker%22%3A%7B%22title%22%3A%22LeanES%22%2C%22description%22%3A%22Docs%20%26%20Guides%22%2C%22sourceRepo%22%3A%22https%3A%2F%2Fgithub.com%2FLeanSDK%2FLeanSDK.github.io%22%2C%22copyright%22%3A%22Denis%20Trayzhon%20and%20SAIFAS%20LLC%22%2C%22social%22%3A%7B%22github%22%3A%22LeanSDK%2Fleanes%22%2C%22twitter%22%3A%22real_ate%22%2C%22discordLink%22%3A%22%3Cinsert%20link%20here%3E%22%7D%7D%2C%22historySupportMiddleware%22%3Atrue%2C%22exportApplicationGlobal%22%3Afalse%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22ember-meta%22%3A%7B%22description%22%3A%22Docs%20%26%20Guides%22%2C%22title%22%3A%22LeanES%22%7D%2C%22ember-collapsible-panel%22%3A%7B%7D%2C%22googleFonts%22%3A%5B%22Fredericka%2Bthe%2BGreat%22%2C%22Roboto%3A300%22%5D%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->  <meta name="ember-cli-head-start" content>  <title>Introduction - Daemon Example - LeanES</title>
+
+<!---->
+<meta name="referrer" content="unsafe-url">
+
+<!---->
+<!---->
+<!---->
+<!---->
+  <meta property="og:title" content="Introduction - Daemon Example - LeanES">
+
+<!---->
+<!---->
+  <meta property="og:type" content="website">
+
+<!---->
+<meta name="twitter:card" content="summary">
+
+<!---->
+<!---->
+  <meta name="twitter:title" content="Introduction - Daemon Example - LeanES">
+
+<!---->
+<!---->
+<!---->
+<!---->
+<!----><meta name="ember-cli-head-end" content>
+
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Roboto:300" rel="stylesheet" type="text/css" media="all">
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-8fdc42ffbb88b6ca5d19e9e988344ec2.css">
+    <link integrity="" rel="stylesheet" href="/assets/@leansdk/leanes-documentation-d41d8cd98f00b204e9800998ecf8427e.css">
+
+    
+  </head>
+  <body  class="application version show version-show">
+    <script type="x/boundary" id="fastboot-body-start"></script><!---->
+
+<header class="header">
+  <nav role="navigation" aria-label="main" class="container">
+    <a href="/" class="logo">
+        <span>
+          LeanES
+        </span>
+    </a>
+
+    <form>
+      <div id="ember18574" class="search-input ember-view"><!----></div>
+    </form>
+  </nav>
+</header>
+
+<main class="container">
+  <aside class="sidebar">
+        
+    <div class="ember-view ember-basic-dropdown-trigger  ember-power-select-trigger" role="button" tabindex="0" data-ebd-id="ember18575-trigger" aria-owns="ember-basic-dropdown-content-ember18575" aria-label="v7.0.0-RU">
+    
+          <span class="ember-power-select-selected-item">
+        
+      7.0
+    
+      </span>
+<!----><span class="ember-power-select-status-icon"></span>
+
+  
+  </div>
+
+    <div id="ember-basic-dropdown-content-ember18575" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+
+
+
+
+  <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox">
+  <label for="toc-toggle">Table of Contents <span class="visually-hidden">toggle</span></label>
+
+  <nav class="toc-container versions" aria-label="table of contents">
+    <ol id="ember18581" class="toc-level-0 ember-view">    <li class="toc-level-0 ">
+<a href="#" id="ember18582" class="loading ember-view">          Introduction
+</a>    </li>
+<!---->    <li class="toc-level-0 ">
+<div id="ember18583" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/getting-started" id="ember18584" class="cp-Panel-toggle ember-view">              Getting Started
+</a>
+<div id="ember18585" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18586" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/getting-started/index" id="ember18587" class="ember-view">          How To Use The Guides
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/getting-started/quick-start" id="ember18588" class="ember-view">          Quick Start
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18589" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/tutorial" id="ember18590" class="cp-Panel-toggle ember-view">              Tutorial
+</a>
+<div id="ember18591" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18592" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<div id="ember18593" class="cp-Panel cp-is-open ember-view"><a href="#" id="ember18594" class="cp-Panel-toggle loading ember-view">              Simple app
+</a>
+<div id="ember18595" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18596" class="toc-level-2 ember-view">    <li class="toc-level-2 ">
+<a href="/v7.0.0-RU/tutorial/simple-app/index" id="ember18597" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-1 ">
+<div id="ember18598" class="cp-Panel cp-is-open ember-view"><a href="#" id="ember18599" class="cp-Panel-toggle loading ember-view">              Daemon app
+</a>
+<div id="ember18600" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18601" class="toc-level-2 ember-view">    <li class="toc-level-2 ">
+<a href="/v7.0.0-RU/tutorial/daemon-app/index" id="ember18602" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-1 ">
+<div id="ember18603" class="cp-Panel cp-is-open ember-view"><a href="#" id="ember18604" class="cp-Panel-toggle loading ember-view">              RESTful Server
+</a>
+<div id="ember18605" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18606" class="toc-level-2 ember-view">    <li class="toc-level-2 ">
+<a href="/v7.0.0-RU/tutorial/rest-server/index" id="ember18607" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember18608" class="loading ember-view">          Core Concepts
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18609" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/object-model" id="ember18610" class="cp-Panel-toggle ember-view">              Object model
+</a>
+<div id="ember18611" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18612" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/index" id="ember18613" class="ember-view">          Introduction
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/core-object" id="ember18614" class="ember-view">          CoreObject
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/meta-object" id="ember18615" class="ember-view">          MetaObject
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/module" id="ember18616" class="ember-view">          Module
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/proto" id="ember18617" class="ember-view">          Proto
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/mixin" id="ember18618" class="ember-view">          Mixin
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/state-machine" id="ember18619" class="ember-view">          StateMachine
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/decorators" id="ember18620" class="ember-view">          Decorators
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/interfaces" id="ember18621" class="ember-view">          Interfaces
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/utils" id="ember18622" class="ember-view">          Utils
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/constants" id="ember18623" class="ember-view">          Constants
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/object-model/plugins-and-patches" id="ember18624" class="ember-view">          Plugins &amp; Patches
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18625" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/puremvc" id="ember18626" class="cp-Panel-toggle ember-view">              PureMVC &amp; Clean Architecture
+</a>
+<div id="ember18627" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18628" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/index" id="ember18629" class="ember-view">          PureMVC Gestalt
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/facade-and-core" id="ember18630" class="ember-view">          Facade &amp; Core
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/notifications" id="ember18631" class="ember-view">          Notifications
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/commands" id="ember18632" class="ember-view">          Commands
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/mediators" id="ember18633" class="ember-view">          Mediators
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/proxies" id="ember18634" class="ember-view">          Proxies
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/clean-arch-entities" id="ember18635" class="ember-view">          Clean Architecture Entities
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/puremvc/dependency-inversion" id="ember18636" class="ember-view">          Dependency inversion
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18637" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/pipes" id="ember18638" class="cp-Panel-toggle ember-view">              Multitones &amp; Pipes
+</a>
+<div id="ember18639" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18640" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/pipes/index" id="ember18641" class="ember-view">          Pipe
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/pipes/pipe-message" id="ember18642" class="ember-view">          PipeMessage
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/pipes/junction" id="ember18643" class="ember-view">          Junction
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/pipes/pipe-aware-module" id="ember18644" class="ember-view">          PipeAwareModule
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18645" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/applications" id="ember18646" class="cp-Panel-toggle ember-view">              Application concerns
+</a>
+<div id="ember18647" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18648" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/applications/index" id="ember18649" class="ember-view">          Application
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/applications/app-types" id="ember18650" class="ember-view">          Application types &amp; Goals
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/applications/app-mediator" id="ember18651" class="ember-view">          Application Mediator
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/applications/script-command" id="ember18652" class="ember-view">          Script command
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/applications/logging" id="ember18653" class="ember-view">          Logging
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/applications/addons-in-use" id="ember18654" class="ember-view">          Addons in use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember18655" class="loading ember-view">          Addons
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18656" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/fs-utils" id="ember18657" class="cp-Panel-toggle ember-view">              Fs Utils
+</a>
+<div id="ember18658" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18659" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/fs-utils/index" id="ember18660" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18661" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/configuration" id="ember18662" class="cp-Panel-toggle ember-view">              Configuration
+</a>
+<div id="ember18663" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18664" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/configuration/index" id="ember18665" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18666" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/delayable" id="ember18667" class="cp-Panel-toggle ember-view">              Delayable
+</a>
+<div id="ember18668" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18669" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/delayable/index" id="ember18670" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18671" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/mapper" id="ember18672" class="cp-Panel-toggle ember-view">              Mapper
+</a>
+<div id="ember18673" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18674" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/mapper/index" id="ember18675" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18676" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/rest" id="ember18677" class="cp-Panel-toggle ember-view">              RESTful
+</a>
+<div id="ember18678" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18679" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/rest/index" id="ember18680" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18681" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/swagger" id="ember18682" class="cp-Panel-toggle ember-view">              Swagger
+</a>
+<div id="ember18683" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18684" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/swagger/index" id="ember18685" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18686" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/queryable" id="ember18687" class="cp-Panel-toggle ember-view">              Queryable
+</a>
+<div id="ember18688" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18689" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/queryable/index" id="ember18690" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18691" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/mongo" id="ember18692" class="cp-Panel-toggle ember-view">              Mongo
+</a>
+<div id="ember18693" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18694" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/mongo/index" id="ember18695" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember18696" class="loading ember-view">          Application Development
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18697" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/simple-example" id="ember18698" class="cp-Panel-toggle ember-view">              Simple Example
+</a>
+<div id="ember18699" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18700" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/simple-example/index" id="ember18701" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18702" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/daemon-example" id="ember18703" class="cp-Panel-toggle selected ember-view">              Daemon Example
+</a>
+<div id="ember18704" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18705" class="toc-level-1 ember-view">    <li class="toc-level-1 selected">
+<a href="/v7.0.0-RU/daemon-example/index" id="ember18706" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18707" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/server-example" id="ember18708" class="cp-Panel-toggle ember-view">              Server Example
+</a>
+<div id="ember18709" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18710" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/server-example/index" id="ember18711" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember18712" class="loading ember-view">          Developer tools
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18713" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/cli" id="ember18714" class="cp-Panel-toggle ember-view">              CLI
+</a>
+<div id="ember18715" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18716" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/cli/" id="ember18717" class="ember-view">          Under Development
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember18718" class="loading ember-view">          Additional Resources
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember18719" class="cp-Panel cp-is-open ember-view"><a href="/v7.0.0-RU/glossary" id="ember18720" class="cp-Panel-toggle ember-view">              Glossary
+</a>
+<div id="ember18721" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember18722" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/glossary/index" id="ember18723" class="ember-view">          CoreObject &amp; Decorators
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/glossary/puremvc" id="ember18724" class="ember-view">          PureMVC
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/glossary/clean-arch" id="ember18725" class="ember-view">          Clean Architecture
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/v7.0.0-RU/glossary/app-level" id="ember18726" class="ember-view">          Application level
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+</ol>
+  </nav>
+
+</aside>
+
+<article id="ember18727" class="chapter ember-view"><!---->
+  <a href="https://github.com/LeanSDK/LeanSDK.github.io/edit/master/guides/v7.0.0-RU/daemon-example/index.md" target="_blank" class="edit-page icon-pencil">Edit Page</a>
+
+<h1>
+  Introduction
+</h1>
+<hr>
+
+<div id="ember18728" class="ember-view">
+</div>
+
+<footer id="ember18729" class="ember-view">  <a href="/v7.0.0-RU/simple-example/index" id="ember18730" class="previous-guide ember-view">Introduction</a>
+
+<a href="/v7.0.0-RU/server-example/index" id="ember18731" class="next-guide ember-view">      We've finished covering Daemon Example. Next up: Server Example - Introduction
+</a></footer>
+</article>
+
+
+</main>
+
+<footer id="ember105" class="es-footer ember-view" role="contentinfo">
+  <div class="footer responsive">
+    <div class="container space-between">
+      <div id="ember106" class="footer-info flex-1">
+        Denis Trayzhon and SAIFAS LLC © 2021
+      </div>
+      <div id="ember114" class="footer-statement footer-social">
+            <a href="http://twitter.com/real_ate" target="_blank" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1000">
+                <path d="M939.5 227.941q-37 54-90 93v23q0 73-21 145t-64 139q-43 67-103 117t-144 82q-84 32-181 30-151 0-276-81 19 2 43 2 126 0 224-77-59-1-105-36t-64-89q19 3 34 3 24 0 48-6-63-13-104-62t-41-115v-2q38 21 82 23-37-25-59-64t-22-86q0-49 25-91 68 83 164 133t208 55q-5-21-5-41 0-75 53-127t127-53q79 0 132 57 61-12 115-44-21 64-80 100 52-6 104-28z"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/LeanSDK/leanes" target="_blank" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1000">
+                <path d="M392 643q0 22-7 45t-24 43q-17 20-40 19t-41-19q-18-18-24-43t-7-45q-1-20 7-46t24-43q16-17 41-19t40 19q15 21 24 43t7 46zm357 0q0 22-7 45t-24 43q-17 20-40 19t-41-19q-18-18-24-43t-7-45q-1-20 7-46t24-43q16-17 41-19t40 19q15 21 24 43t7 46zm90 0q0-67-39-114t-104-47q-23 0-109 12-40 6-88 6t-87-6q-85-12-109-12-66 0-104 47t-39 114q0 49 18 85t45 58q27 22 68 33t78 17q37 6 83 4h94q46 0 83-4t78-17q41-13 69-33t45-58q17-38 18-85zm125-99q0 116-34 185-22 43-59 74t-79 48q-42 17-95 27t-96 12q-43 2-93 3-43 0-79-2t-82-7q-46-5-85-17t-77-29q-38-17-67-45t-48-64q-35-69-35-185 0-132 76-221-15-45-15-95 0-64 28-121 61 0 106 22t106 69q82-20 172-20 83 0 157 18 58-46 104-67t105-22q29 57 29 121 0 49-15 94 76 89 76 222z"></path>
+              </svg>
+            </a>
+            <a href="<insert link here>" title="Discord">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 245 240">
+                <path d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"></path>
+                <path class="st0" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"></path>
+              </svg>
+            </a>
+      </div>
+      <div id="ember118" class="footer-info flex-1 text-align-right">
+        Built with <a href="https://github.com/empress/guidemaker" target="_blank">Guidemaker</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="x/boundary" id="fastboot-body-end"></script>
+
+    <script src="/assets/vendor-9810575d7703ae25fa81beb43e2fecce.js"></script>
+    <script src="/assets/@leansdk/leanes-documentation-941f9cfa4e1be5e73b5b9a87e786f570.js"></script>
+
+    <div id="ember-basic-dropdown-wormhole"></div>
+  </body>
+</html>

@@ -7,4 +7,4 @@ else
   BUILD_ENV="$1"
 fi
 
-sudo -u "$USER" sh -c "bash ./ember build --environment=${BUILD_ENV}"
+sudo -u "$USER" sh -c "bash ./ember build --environment=${BUILD_ENV} --output-path docs"

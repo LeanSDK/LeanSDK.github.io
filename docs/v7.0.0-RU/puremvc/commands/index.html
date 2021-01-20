@@ -7,10 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     
-<meta name="@leansdk/leanes-documentation/config/environment" content="%7B%22modulePrefix%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22trailing-history%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22version%22%3A%227.0.0%2B855d14f8%22%7D%2C%22guidemaker%22%3A%7B%22title%22%3A%22LeanES%22%2C%22description%22%3A%22Docs%20%26%20Guides%22%2C%22sourceRepo%22%3A%22https%3A%2F%2Fgithub.com%2FLeanSDK%2FLeanSDK.github.io%22%2C%22copyright%22%3A%22Denis%20Trayzhon%20and%20SAIFAS%20LLC%22%2C%22social%22%3A%7B%22github%22%3A%22LeanSDK%2Fleanes%22%2C%22twitter%22%3A%22real_ate%22%2C%22discordLink%22%3A%22%3Cinsert%20link%20here%3E%22%7D%7D%2C%22historySupportMiddleware%22%3Atrue%2C%22exportApplicationGlobal%22%3Afalse%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22ember-meta%22%3A%7B%22description%22%3A%22Docs%20%26%20Guides%22%2C%22title%22%3A%22LeanES%22%7D%2C%22ember-collapsible-panel%22%3A%7B%7D%2C%22googleFonts%22%3A%5B%22Fredericka%2Bthe%2BGreat%22%2C%22Roboto%3A300%22%5D%7D" />
+<meta name="@leansdk/leanes-documentation/config/environment" content="%7B%22modulePrefix%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22trailing-history%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22version%22%3A%227.0.0%2Ba2cf87ab%22%7D%2C%22guidemaker%22%3A%7B%22title%22%3A%22LeanES%22%2C%22description%22%3A%22Docs%20%26%20Guides%22%2C%22sourceRepo%22%3A%22https%3A%2F%2Fgithub.com%2FLeanSDK%2FLeanSDK.github.io%22%2C%22copyright%22%3A%22Denis%20Trayzhon%20and%20SAIFAS%20LLC%22%2C%22social%22%3A%7B%22github%22%3A%22LeanSDK%2Fleanes%22%2C%22twitter%22%3A%22real_ate%22%2C%22discordLink%22%3A%22%3Cinsert%20link%20here%3E%22%7D%7D%2C%22historySupportMiddleware%22%3Atrue%2C%22exportApplicationGlobal%22%3Afalse%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22ember-meta%22%3A%7B%22description%22%3A%22Docs%20%26%20Guides%22%2C%22title%22%3A%22LeanES%22%7D%2C%22ember-collapsible-panel%22%3A%7B%7D%2C%22googleFonts%22%3A%5B%22Fredericka%2Bthe%2BGreat%22%2C%22Roboto%3A300%22%5D%7D" />
 <!-- EMBER_CLI_FASTBOOT_TITLE -->  <meta name="ember-cli-head-start" content>  <title>Commands - PureMVC &amp; Clean Architecture - LeanES</title>
 
-<!---->
+  <meta name="description" content="Определенный Фасад инициализирует Контроллер, передавая Командам связанные с ними Оповещения необходимые для старта приложения. 
+
+Для каждой связки (Mapping), Контроллер регистрируется как Наблюдатель над данным Оповещением. Когда происходит Оповещение...">
+
 <meta name="referrer" content="unsafe-url">
 
 <!---->
@@ -20,7 +23,10 @@
   <meta property="og:title" content="Commands - PureMVC &amp; Clean Architecture - LeanES">
 
 <!---->
-<!---->
+  <meta property="og:description" content="Определенный Фасад инициализирует Контроллер, передавая Командам связанные с ними Оповещения необходимые для старта приложения. 
+
+Для каждой связки (Mapping), Контроллер регистрируется как Наблюдатель над данным Оповещением. Когда происходит Оповещение...">
+
   <meta property="og:type" content="website">
 
 <!---->
@@ -31,7 +37,10 @@
   <meta name="twitter:title" content="Commands - PureMVC &amp; Clean Architecture - LeanES">
 
 <!---->
-<!---->
+  <meta name="twitter:description" content="Определенный Фасад инициализирует Контроллер, передавая Командам связанные с ними Оповещения необходимые для старта приложения. 
+
+Для каждой связки (Mapping), Контроллер регистрируется как Наблюдатель над данным Оповещением. Когда происходит Оповещение...">
+
 <!---->
 <!---->
 <!----><meta name="ember-cli-head-end" content>
@@ -511,7 +520,270 @@
 </h1>
 <hr>
 
-<div id="ember23453" class="ember-view">
+<div id="ember23453" class="ember-view"><p>Определенный <em>Фасад</em> инициализирует <em>Контроллер</em>, передавая <em>Командам</em>
+связанные с ними <em>Оповещения</em> необходимые для старта приложения.</p>
+<p>Для каждой связки (Mapping), <em>Контроллер</em> регистрируется как <em>Наблюдатель</em>
+над данным <em>Оповещением</em>. Когда происходит <em>Оповещение</em>, <em>Контроллер</em>
+создает экземпляр соответствующей <em>Команды</em>. И, наконец, <em>Контроллер</em>
+вызывает у созданной команды метод execute(), передавая в него данное
+<em>Оповещение</em>.</p>
+<p>Команды единоразовы; они создаются по требованию (приходит
+<em>Оповещение</em>), и после их исполнения (вызов метода execute) они должны
+удаляться. В связи с чем, важно не создавать экземпляры и не хранить ссылки
+на <em>Команды</em> в объектах, которые будет использоваться в течении долго срока
+в вашем приложении.</p>
+<h2 id="">Использование Макро- и Простых команд</h2>
+<section aria-labelledby="">
+<p>Команды, как и все классы фреймворка PureMVC, реализовывают
+интерфейс, а именно интерфейс ICommand. PureMVC содержит две
+реализацию ICommand интерфейса для Макро-команды которую вы можете с легкостью расширять.</p>
+<p>Класс Command (Макрокоманда) позволяет выполнять несколько
+подкоманд последовательно, каждой из которых будет после создания
+передан экземпляр текущего Оповещения.</p>
+<p>Класс Command из конструктора вызывает свой метод
+initializeSubCommands. Вы должны переопределить его в своем классе
+макрокоманды, для вызова метода addSubCommand для каждой команды,
+которую вы ходите добавить в макрокоманду. Вы можете добавлять любые
+<em>Команды</em> или <em>Макрокоманды</em>.</p>
+<p>Для того, чтобы кастомная команда была "Простой", достаточно переопределить метод
+execute, который принимает в качестве параметра экземпляр INotification.
+Вписываете вашу функциональность в метод execute и все готово к работе.</p>
+</section>
+<h2 id="-1">Слабое связывание Команд с Медиаторами и Прокси</h2>
+<section aria-labelledby="-1">
+<p><em>Команды</em> выполняются <em>Контроллером</em> в результате отправки <em>Оповещения</em>.
+<em>Команды</em> не должны быть созданы и выполнены никем кроме <em>Контроллера</em>.</p>
+<p>Чтобы общаться и взаимодействовать с другими частями системы, <em>Команды</em>
+могут:</p>
+<ul>
+<li>Регистрировать, удалять или проверять существуют ли <em>Медиаторы</em>,
+<em>Прокси</em> и <em>Команды</em>.</li>
+<li>Посылать <em>Оповещения</em>, для получения ответной реакции от других
+команд или <em>Медиаторов</em>.</li>
+<li>Получать экземпляры <em>Прокси</em> и <em>Медиаторов</em> и управлять ими
+напрямую.</li>
+</ul>
+<p><em>Команды</em> позволяют нам легко переключать элементы <em>Представления</em>
+между различными состояниями (через <em>Медиаторы</em>), или передавать
+данные к различным частям этих элементов.</p>
+<p>Они могут быть использованы для осуществления транзакционного
+взаимодействия с <em>Моделью</em>, которую охватывают несколько <em>Прокси</em>,
+требовать отправки <em>Оповещения</em> по окончанию транзакции, или
+обрабатывать непредвиденные ситуации (exceptions) и принимать
+соответствующие действия.</p>
+</section>
+<h2 id="-2">Взаимодействие сложных действий и бизнес-логики</h2>
+<section aria-labelledby="-2">
+<p>местах вашего приложения, где вы могли бы разместить код (<em>Команд</em>,
+<em>Медиаторов</em> и <em>Прокси</em>) неизбежно и периодически будет возникать вопрос:</p>
+<p>Какой код и где писать? Что конкретно должна делать <em>Команда</em>?</p>
+<p>Первое разделение логики в вашем приложении коснется бизнес-логики и
+логики предметной области.</p>
+<p>В командах находится бизнес-логика нашего приложения; ожидается, что
+техническая реализация сценариев использования нашего приложения
+будет выполняться на уровне модели предметной области (Domain Model).
+Это подразумевает координацию <em>Модели</em> и состояниями <em>Представления</em>.</p>
+<p>Модель поддерживает свою целостность, используя <em>Прокси</em>, которые
+размещены в логике предметной области (Domain Logic), открывая API для
+работы с объектами данных. Они инкапсулируют весь доступ к моделям
+данных, находящимся на клиенте или на сервере, для того чтобы остальная
+часть приложения которая работает с данными, могли иметь к ним
+синхронный или асинхронный доступ.</p>
+<p><em>Команды</em> могут быть использованы для управления рядом действий в
+системе, которые должны происходить в определенном порядке, с
+возможностью того что результат предыдущего действия может быть
+использован для последующего.</p>
+<p><em>Медиаторы</em> и <em>Прокси</em> должны предоставлять крупномодульные интерфейсы
+<em>Командам</em> (и наоборот), которые скрывают реализацию объектов данных и
+компонентов представления, которыми они управляют.</p>
+<p>Заметьте, что когда мы говорим про компонент представления, мы имеем в
+виду кнопку или виджет, с которым непосредственно взаимодействует
+пользователь. Когда мы говорим об объекте данных, то подразумеваем
+произвольные структуры данных, а также удаленные сервисы, которые
+могут быть использованы для хранения или получения данных.</p>
+<p><em>Команды</em> взаимодействуют с <em>Медиаторами</em> и <em>Прокси</em>, но должны быть
+изолированы от граничных реализаций. Вот пример того как <em>Команда</em>
+используется для подготовки приложения к работе:</p>
+<pre><code class="js language-js">import type { NotificationInterface } from '../interfaces/NotificationInterface';
+
+export default (Module) =&gt; {
+  const {
+    STARTUP, STARTUP_COMPLETE,
+    Command,
+    PrepareControllerCommand,
+    PrepareModelCommand,
+    PrepareViewCommand,
+    initialize, partOf, meta, method, nameBy
+  } = Module.NS;
+
+  @initialize
+  @partOf(Module)
+  class StartupCommand extends Command {
+    @nameBy static  __filename = __filename;
+    @meta static object = {};
+
+    @method initializeSubCommands(): void {
+      this.addSubCommand(PrepareControllerCommand);
+      this.addSubCommand(PrepareModelCommand);
+      this.addSubCommand(PrepareViewCommand);
+    }
+
+    @method execute&lt;T = ?any&gt;(note: NotificationInterface&lt;T&gt;): void {
+      super.execute(note);
+      this.facade.removeCommand(STARTUP);
+      this.send(STARTUP_COMPLETE);
+    }
+  }
+}
+</code></pre>
+<p>Это <em>макрокоманда</em>, которая содержит три подкоманды, которые при вызове
+макрокоманды исполняются в порядке очереди (FIFO).</p>
+<p>Это создает 'очередь' верхнего уровня из действий, которые должны быть
+выполнены на старте приложения. Но что конкретно должны мы сделать, и
+в каком порядке?</p>
+<p>Прежде чем пользователь увидит или сможет взаимодействовать с
+приложением и его данными, <em>Модель</em> должна быть надлежащим образом
+подготовлена. Как только это сделано, <em>Представление</em> может быть
+подготовлено для отображения данных <em>Модели</em> и позволить пользователю
+взаимодействовать с ними.</p>
+<p>Следовательно, процесс старта обычно состоит из трех обширных групп
+операций — подготовка <em>Контроллер</em>, <em>Модели</em>, и последующая подготовка
+<em>Представления</em>.</p>
+<pre><code class="js language-js">import type { NotificationInterface } from '../interfaces/NotificationInterface';
+
+export default (Module) =&gt; {
+  const {
+    MSG_FROM_CONSOLE, CLEAR_CONSOLE,
+    Command,
+    initialize, partOf, meta, method, nameBy
+  } = Module.NS;
+
+  @initialize
+  @partOf(Module)
+  class PrepareControllerCommand extends Command {
+    @nameBy static  __filename = __filename;
+    @meta static object = {};
+
+    @method execute&lt;T = ?any&gt;(note: NotificationInterface&lt;T&gt;): void {
+      this.facade.addCommand(MSG_FROM_CONSOLE, 'SimpleCommand');
+      this.facade.addCommand(CLEAR_CONSOLE, 'SimpleScript');
+    }
+  }
+}
+</code></pre>
+<p>Подготовка <em>Контроллера</em>, обычно, является простым созданием и регистрацией
+всех <em>Команд</em>, в которых приложение будет нуждаться при запуске.</p>
+<p>Пример команды PrepareControllerCommand, это Простая команда, которая
+подготавливает <em>Контроллер</em> к дальнейшей работе. Это первая из подкоманд
+макрокоманды, и поэтому она будет выполнена первой.</p>
+<p>Через <em>конкретный Фасад</em>, она регистрирует те <em>Команды</em>, которые
+система будет использовать при запуске.</p>
+<pre><code class="js language-js">import type { NotificationInterface } from '../interfaces/NotificationInterface';
+import type { ApplicationInterface } from '../interfaces/ApplicationInterface';
+
+export default (Module) =&gt; {
+  const {
+    APPLICATION_PROXY, SIMPLE_PROXY,
+    Command,
+    initialize, partOf, meta, method, nameBy
+  } = Module.NS;
+
+  @initialize
+  @partOf(Module)
+  class PrepareModelCommand extends Command {
+    @nameBy static  __filename = __filename;
+    @meta static object = {};
+
+    @method execute&lt;T = ?any&gt;(note: NotificationInterface&lt;T&gt;): void {
+      const app: ApplicationInterface = note.getBody();
+      this.facade.addProxy(APPLICATION_PROXY, 'ApplicationProxy', app.initialState);
+      this.facade.addAdapter('SimpleAdapter');
+      this.facade.addProxy(SIMPLE_PROXY, 'SimpleProxy');
+    }
+  }
+}
+</code></pre>
+<p>Подготовка <em>Модели</em>, обычно, является простым созданием и регистрацией
+всех <em>Прокси</em>, в которых приложение будет нуждаться при запуске.</p>
+<p>Пример команды PrepareModelCommand, это Простая команда, которая
+подготавливает <em>Модель</em> к дальнейшей работе.</p>
+<p>Через <em>конкретный Фасад</em>, она создает и регистрирует те <em>Прокси</em>, которые
+система будет использовать при запуске. Заметьте, что <em>Команда</em> не делает
+никаких манипуляций или инициализаций с данными <em>Модели</em>. <em>Прокси</em>
+отвечает за любое получение данных, создание или инициализацию
+необходимых <em>Объектов Данных</em> для использования в системе.</p>
+<pre><code class="js language-js">import type { NotificationInterface } from '../interfaces/NotificationInterface';
+import type { ApplicationInterface } from '../interfaces/ApplicationInterface';
+
+export default (Module) =&gt; {
+  const {
+    APPLICATION_MEDIATOR, SHELL, LOGGER_MODULE, SIGNALS_GENERATOR,
+    Command,
+    initialize, partOf, meta, method, nameBy
+  } = Module.NS;
+
+  @initialize
+  @partOf(Module)
+  class PrepareViewCommand extends Command {
+    @nameBy static  __filename = __filename;
+    @meta static object = {};
+
+    @method execute&lt;T = ?any&gt;(note: NotificationInterface&lt;T&gt;): void {
+      console.log('PrepareViewCommand execute()');
+      const app: ApplicationInterface = note.getBody();
+
+      this.facade.addMediator(LOGGER_MODULE, 'LoggerModuleMediator');
+      this.facade.addMediator(SHELL, 'ShellJunctionMediator');
+      this.facade.addMediator(APPLICATION_MEDIATOR, 'ApplicationMediator', app);
+
+      this.facade.activateMediator(APPLICATION_MEDIATOR);
+      this.facade.activateMediator(LOGGER_MODULE);
+      this.facade.activateMediator(SHELL);
+
+      if (!app.isLightweight) {
+        this.facade.addMediator(SIGNALS_GENERATOR, 'SignalsMediator');
+        this.facade.activateMediator(SIGNALS_GENERATOR);
+        this.facade.addMediator('SimpleMediator');
+        this.facade.activateMediator('SimpleMediator');
+      }
+    }
+  }
+}
+</code></pre>
+<p>Это простая <em>команда</em> которая подготавливает <em>Представление</em> для работы.
+Это последняя из подкоманд <em>макрокоманды</em>, следовательно, будет
+выполнена последней.</p>
+<p>Отметьте, что создается и регистрируется только <em>Медиатор</em>
+ApplicationMediator, который обслуживает компонент представления
+приложения.</p>
+<p>В дальнейшем, тело Оповещения передается в конструктор медиатора. Это
+ссылка на приложение, переданная самим приложением вместе с
+<em>Оповещением</em>, когда первоначальное <em>Оповещение</em> STARTUP было послано.
+(Согласно предыдущему примеру приложения MyApp.)</p>
+<p>Приложение это в некоторой степени специальный компонент
+<em>Представления</em>, в котором реализуются и находятся в качестве потомков
+все другие компоненты <em>Представления</em>, которые инициализируются при
+запуске приложения.</p>
+<p>Для взаимосвязи с остальной частью системы, компоненты <em>Представления</em>
+должны обладать <em>Медиаторами</em>. И создание этих <em>Медиаторов</em> требует
+ссылку на компоненты <em>Представления</em>, с которыми они будут работать, а
+это на данном этапе известно только приложению.</p>
+<p><em>Медиатор</em> приложения - это единственный класс, которому допускается
+знать все про реализацию <em>Представления</em> приложения, так что создание
+оставшихся <em>Медиаторов</em> будет размещена внутри его конструктора.</p>
+<p>Используя эти три команды, мы обеспечили последовательную
+инициализацию <em>Модели</em> и <em>Представления</em>. При этом <em>Команды</em> не должны
+знать много о <em>Модели</em> или о <em>Представлении</em>.</p>
+<p>При изменении <em>Модели</em> или реализации <em>Представления</em>, <em>Прокси</em> и
+<em>Медиаторы</em> должны быть изменены соответствующим образом.
+Бизнес-логика внутри Команд не должна зависеть от изменений,
+происходящих в областях применения.</p>
+<p><em>Модель</em> должна формировать «логику предметной области», поддерживая
+целостность данных внутри <em>Прокси</em>. <em>Команды</em> выполняют
+«транзакционную» или «бизнес» логику в <em>Модели</em>, формируя координацию
+транзакций <em>мульти-Прокси</em> или обрабатывая и сообщая об исключительных
+ситуациях.</p>
+</section>
 </div>
 
 <footer id="ember23454" class="ember-view">  <a href="/v7.0.0-RU/puremvc/notifications" id="ember23455" class="previous-guide ember-view">Notifications</a>
@@ -556,7 +828,7 @@
 <script type="x/boundary" id="fastboot-body-end"></script>
 
     <script src="/assets/vendor-9810575d7703ae25fa81beb43e2fecce.js"></script>
-    <script src="/assets/@leansdk/leanes-documentation-be89b4daf86b1bb17bc7838c031538c7.js"></script>
+    <script src="/assets/@leansdk/leanes-documentation-1db2186c87fa1564986612e9754b6acd.js"></script>
 
     <div id="ember-basic-dropdown-wormhole"></div>
   </body>

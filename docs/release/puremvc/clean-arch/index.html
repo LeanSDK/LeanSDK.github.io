@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="@leansdk/leanes-documentation/config/environment" content="%7B%22modulePrefix%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3A%22%2F%22%2C%22locationType%22%3A%22trailing-history%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%2C%22EXTEND_PROTOTYPES%22%3A%7B%22Date%22%3Afalse%7D%2C%22_APPLICATION_TEMPLATE_WRAPPER%22%3Afalse%2C%22_DEFAULT_ASYNC_OBSERVERS%22%3Atrue%2C%22_JQUERY_INTEGRATION%22%3Afalse%2C%22_TEMPLATE_ONLY_GLIMMER_COMPONENTS%22%3Atrue%7D%2C%22APP%22%3A%7B%22name%22%3A%22%40leansdk%2Fleanes-documentation%22%2C%22version%22%3A%227.0.0%2B197df073%22%7D%2C%22guidemaker%22%3A%7B%22title%22%3A%22LeanES%22%2C%22description%22%3A%22Docs%20%26%20Guides%22%2C%22sourceRepo%22%3A%22https%3A%2F%2Fgithub.com%2FLeanSDK%2FLeanSDK.github.io%22%2C%22copyright%22%3A%22Denis%20Trayzhon%20and%20SAIFAS%20LLC%22%2C%22social%22%3A%7B%22github%22%3A%22LeanSDK%2Fleanes%22%2C%22twitter%22%3A%22real_ate%22%2C%22discordLink%22%3A%22%3Cinsert%20link%20here%3E%22%7D%7D%2C%22historySupportMiddleware%22%3Atrue%2C%22exportApplicationGlobal%22%3Afalse%2C%22fastboot%22%3A%7B%22hostWhitelist%22%3A%5B%7B%7D%5D%7D%2C%22ember-meta%22%3A%7B%22description%22%3A%22Docs%20%26%20Guides%22%2C%22title%22%3A%22LeanES%22%7D%2C%22ember-collapsible-panel%22%3A%7B%7D%2C%22googleFonts%22%3A%5B%22Fredericka%2Bthe%2BGreat%22%2C%22Roboto%3A300%22%5D%7D" />
+<!-- EMBER_CLI_FASTBOOT_TITLE -->  <meta name="ember-cli-head-start" content>  <title>Clean Architecture - PureMVC &amp; Clean Architecture - LeanES</title>
+
+  <meta name="description" content="The Clean Architecture описывает основные общие правила построения архитектуры приложения. Как сделать разработку тестируемой, удобной, понятной, а части системы взаимозаменяемыми. 
+
+За последние несколько лет было предложено множество идей построения...">
+
+<meta name="referrer" content="unsafe-url">
+
+<!---->
+<!---->
+<!---->
+<!---->
+  <meta property="og:title" content="Clean Architecture - PureMVC &amp; Clean Architecture - LeanES">
+
+<!---->
+  <meta property="og:description" content="The Clean Architecture описывает основные общие правила построения архитектуры приложения. Как сделать разработку тестируемой, удобной, понятной, а части системы взаимозаменяемыми. 
+
+За последние несколько лет было предложено множество идей построения...">
+
+  <meta property="og:type" content="website">
+
+<!---->
+<meta name="twitter:card" content="summary">
+
+<!---->
+<!---->
+  <meta name="twitter:title" content="Clean Architecture - PureMVC &amp; Clean Architecture - LeanES">
+
+<!---->
+  <meta name="twitter:description" content="The Clean Architecture описывает основные общие правила построения архитектуры приложения. Как сделать разработку тестируемой, удобной, понятной, а части системы взаимозаменяемыми. 
+
+За последние несколько лет было предложено множество идей построения...">
+
+<!---->
+<!---->
+<!----><meta name="ember-cli-head-end" content>
+
+<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Roboto:300" rel="stylesheet" type="text/css" media="all">
+
+    <link integrity="" rel="stylesheet" href="/assets/vendor-8fdc42ffbb88b6ca5d19e9e988344ec2.css">
+    <link integrity="" rel="stylesheet" href="/assets/@leansdk/leanes-documentation-d41d8cd98f00b204e9800998ecf8427e.css">
+
+    
+  </head>
+  <body  class="application version show version-show">
+    <script type="x/boundary" id="fastboot-body-start"></script><!---->
+
+<header class="header">
+  <nav role="navigation" aria-label="main" class="container">
+    <a href="/" class="logo">
+        <span>
+          LeanES
+        </span>
+    </a>
+
+    <form>
+      <div id="ember14918" class="search-input ember-view"><!----></div>
+    </form>
+  </nav>
+</header>
+
+<main class="container">
+  <aside class="sidebar">
+        
+    <div class="ember-view ember-basic-dropdown-trigger  ember-power-select-trigger" role="button" tabindex="0" data-ebd-id="ember14919-trigger" aria-owns="ember-basic-dropdown-content-ember14919" aria-label="v7.0.0-RU">
+    
+          <span class="ember-power-select-selected-item">
+        
+      7.0
+    
+      </span>
+<!----><span class="ember-power-select-status-icon"></span>
+
+  
+  </div>
+
+    <div id="ember-basic-dropdown-content-ember14919" class="ember-basic-dropdown-content-placeholder" style="display: none;"></div>
+
+
+
+
+
+  <input id="toc-toggle" class="toc-toggle visually-hidden" type="checkbox">
+  <label for="toc-toggle">Table of Contents <span class="visually-hidden">toggle</span></label>
+
+  <nav class="toc-container versions" aria-label="table of contents">
+    <ol id="ember14925" class="toc-level-0 ember-view">    <li class="toc-level-0 ">
+<a href="#" id="ember14926" class="loading ember-view">          Introduction
+</a>    </li>
+<!---->    <li class="toc-level-0 ">
+<div id="ember14927" class="cp-Panel cp-is-open ember-view"><a href="/release/getting-started" id="ember14928" class="cp-Panel-toggle ember-view">              Getting Started
+</a>
+<div id="ember14929" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14930" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/getting-started/index" id="ember14931" class="ember-view">          How To Use The Guides
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/getting-started/quick-start" id="ember14932" class="ember-view">          Quick Start
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember14933" class="cp-Panel cp-is-open ember-view"><a href="/release/tutorial" id="ember14934" class="cp-Panel-toggle ember-view">              Tutorial
+</a>
+<div id="ember14935" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14936" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<div id="ember14937" class="cp-Panel cp-is-open ember-view"><a href="#" id="ember14938" class="cp-Panel-toggle loading ember-view">              Simple app
+</a>
+<div id="ember14939" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14940" class="toc-level-2 ember-view">    <li class="toc-level-2 ">
+<a href="/release/tutorial/simple-app/index" id="ember14941" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-1 ">
+<div id="ember14942" class="cp-Panel cp-is-open ember-view"><a href="#" id="ember14943" class="cp-Panel-toggle loading ember-view">              Daemon app
+</a>
+<div id="ember14944" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14945" class="toc-level-2 ember-view">    <li class="toc-level-2 ">
+<a href="/release/tutorial/daemon-app/index" id="ember14946" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-1 ">
+<div id="ember14947" class="cp-Panel cp-is-open ember-view"><a href="#" id="ember14948" class="cp-Panel-toggle loading ember-view">              RESTful Server
+</a>
+<div id="ember14949" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14950" class="toc-level-2 ember-view">    <li class="toc-level-2 ">
+<a href="/release/tutorial/rest-server/index" id="ember14951" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember14952" class="loading ember-view">          Core Concepts
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember14953" class="cp-Panel cp-is-open ember-view"><a href="/release/object-model" id="ember14954" class="cp-Panel-toggle ember-view">              Object model
+</a>
+<div id="ember14955" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14956" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/object-model/index" id="ember14957" class="ember-view">          Introduction
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/core-object" id="ember14958" class="ember-view">          CoreObject
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/meta-object" id="ember14959" class="ember-view">          MetaObject
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/module" id="ember14960" class="ember-view">          Module
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/proto" id="ember14961" class="ember-view">          Proto
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/mixin" id="ember14962" class="ember-view">          Mixin
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/state-machine" id="ember14963" class="ember-view">          StateMachine
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/decorators" id="ember14964" class="ember-view">          Decorators
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/interfaces" id="ember14965" class="ember-view">          Interfaces
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/utils" id="ember14966" class="ember-view">          Utils
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/constants" id="ember14967" class="ember-view">          Constants
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/object-model/plugins-and-patches" id="ember14968" class="ember-view">          Plugins &amp; Patches
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember14969" class="cp-Panel cp-is-open ember-view"><a href="/release/puremvc" id="ember14970" class="cp-Panel-toggle ember-view">              PureMVC &amp; Clean Architecture
+</a>
+<div id="ember14971" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14972" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/puremvc/index" id="ember14973" class="ember-view">          PureMVC Gestalt
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/facade" id="ember14974" class="ember-view">          Facade
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/notifications" id="ember14975" class="ember-view">          Notifications
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/commands" id="ember14976" class="ember-view">          Commands
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/mediators" id="ember14977" class="ember-view">          Mediators
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/proxies" id="ember14978" class="ember-view">          Proxies
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/solid" id="ember14979" class="ember-view">          SOLID
+</a>    </li>
+    <li class="toc-level-1 selected">
+<a href="/release/puremvc/clean-arch" id="ember14980" class="selected ember-view">          Clean Architecture
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/puremvc/dependency-inversion" id="ember14981" class="ember-view">          Dependency inversion
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember14982" class="cp-Panel cp-is-open ember-view"><a href="/release/pipes" id="ember14983" class="cp-Panel-toggle ember-view">              Multitones &amp; Pipes
+</a>
+<div id="ember14984" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14985" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/pipes/index" id="ember14986" class="ember-view">          Pipe
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/pipes/pipe-message" id="ember14987" class="ember-view">          PipeMessage
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/pipes/junction" id="ember14988" class="ember-view">          Junction
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/pipes/pipe-aware-module" id="ember14989" class="ember-view">          PipeAwareModule
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember14990" class="cp-Panel cp-is-open ember-view"><a href="/release/applications" id="ember14991" class="cp-Panel-toggle ember-view">              Application concerns
+</a>
+<div id="ember14992" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember14993" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/applications/index" id="ember14994" class="ember-view">          Application
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/applications/app-types" id="ember14995" class="ember-view">          Application types &amp; Goals
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/applications/app-mediator" id="ember14996" class="ember-view">          Application Mediator
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/applications/script-command" id="ember14997" class="ember-view">          Script command
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/applications/logging" id="ember14998" class="ember-view">          Logging
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/applications/addons-in-use" id="ember14999" class="ember-view">          Addons in use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember15000" class="loading ember-view">          Addons
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15001" class="cp-Panel cp-is-open ember-view"><a href="/release/fs-utils" id="ember15002" class="cp-Panel-toggle ember-view">              Fs Utils
+</a>
+<div id="ember15003" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15004" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/fs-utils/index" id="ember15005" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15006" class="cp-Panel cp-is-open ember-view"><a href="/release/configuration" id="ember15007" class="cp-Panel-toggle ember-view">              Configuration
+</a>
+<div id="ember15008" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15009" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/configuration/index" id="ember15010" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15011" class="cp-Panel cp-is-open ember-view"><a href="/release/delayable" id="ember15012" class="cp-Panel-toggle ember-view">              Delayable
+</a>
+<div id="ember15013" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15014" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/delayable/index" id="ember15015" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15016" class="cp-Panel cp-is-open ember-view"><a href="/release/mapper" id="ember15017" class="cp-Panel-toggle ember-view">              Mapper
+</a>
+<div id="ember15018" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15019" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/mapper/index" id="ember15020" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15021" class="cp-Panel cp-is-open ember-view"><a href="/release/rest" id="ember15022" class="cp-Panel-toggle ember-view">              RESTful
+</a>
+<div id="ember15023" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15024" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/rest/index" id="ember15025" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15026" class="cp-Panel cp-is-open ember-view"><a href="/release/swagger" id="ember15027" class="cp-Panel-toggle ember-view">              Swagger
+</a>
+<div id="ember15028" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15029" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/swagger/index" id="ember15030" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15031" class="cp-Panel cp-is-open ember-view"><a href="/release/queryable" id="ember15032" class="cp-Panel-toggle ember-view">              Queryable
+</a>
+<div id="ember15033" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15034" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/queryable/index" id="ember15035" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15036" class="cp-Panel cp-is-open ember-view"><a href="/release/mongo" id="ember15037" class="cp-Panel-toggle ember-view">              Mongo
+</a>
+<div id="ember15038" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15039" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/mongo/index" id="ember15040" class="ember-view">          How To Use
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember15041" class="loading ember-view">          Application Development
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15042" class="cp-Panel cp-is-open ember-view"><a href="/release/simple-example" id="ember15043" class="cp-Panel-toggle ember-view">              Simple Example
+</a>
+<div id="ember15044" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15045" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/simple-example/index" id="ember15046" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15047" class="cp-Panel cp-is-open ember-view"><a href="/release/daemon-example" id="ember15048" class="cp-Panel-toggle ember-view">              Daemon Example
+</a>
+<div id="ember15049" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15050" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/daemon-example/index" id="ember15051" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15052" class="cp-Panel cp-is-open ember-view"><a href="/release/server-example" id="ember15053" class="cp-Panel-toggle ember-view">              Server Example
+</a>
+<div id="ember15054" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15055" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/server-example/index" id="ember15056" class="ember-view">          Introduction
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember15057" class="loading ember-view">          Developer tools
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15058" class="cp-Panel cp-is-open ember-view"><a href="/release/cli" id="ember15059" class="cp-Panel-toggle ember-view">              CLI
+</a>
+<div id="ember15060" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15061" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/cli/" id="ember15062" class="ember-view">          Under Development
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+    <li class="toc-level-0 ">
+<a href="#" id="ember15063" class="loading ember-view">          Additional Resources
+</a>    </li>
+    <li class="toc-level-0 ">
+<div id="ember15064" class="cp-Panel cp-is-open ember-view"><a href="/release/glossary" id="ember15065" class="cp-Panel-toggle ember-view">              Glossary
+</a>
+<div id="ember15066" class="cp-Panel-body cp-is-open ember-view">
+    <div class="cp-Panel-body-inner">
+                  <ol id="ember15067" class="toc-level-1 ember-view">    <li class="toc-level-1 ">
+<a href="/release/glossary/index" id="ember15068" class="ember-view">          CoreObject &amp; Decorators
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/glossary/puremvc" id="ember15069" class="ember-view">          PureMVC
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/glossary/clean-arch" id="ember15070" class="ember-view">          Clean Architecture
+</a>    </li>
+    <li class="toc-level-1 ">
+<a href="/release/glossary/app-level" id="ember15071" class="ember-view">          Application level
+</a>    </li>
+</ol>
+
+    </div>
+
+</div>
+</div>    </li>
+</ol>
+  </nav>
+
+</aside>
+
+<article id="ember15072" class="chapter ember-view"><!---->
+  <a href="https://github.com/LeanSDK/LeanSDK.github.io/edit/master/guides/v7.0.0-RU/puremvc/clean-arch.md" target="_blank" class="edit-page icon-pencil">Edit Page</a>
+
+<h1>
+  Clean Architecture
+</h1>
+<hr>
+
+<div id="ember15073" class="ember-view"><p><img src="/images/puremvc/gestalt/clean_architecture.jpg" alt="Clean Architecture" /></p>
+<p><b>The Clean Architecture</b> описывает основные общие правила построения архитектуры приложения.
+Как сделать разработку тестируемой, удобной, понятной, а части системы взаимозаменяемыми.</p>
+<p>За последние несколько лет было предложено множество идей построения архитектуры.</p>
+<p>Например:</p>
+<ul>
+<li><a href="http://alistair.cockburn.us/Hexagonal+architecture">Hexagonal Architecture</a>
+(или Ports and Adapters) от Alistair Cockburn адаптированная Steve Freeman
+и Nat Pryce в их замечательной книге Growing Object Oriented Software</li>
+<li><a href="http://jeffreypalermo.com/blog/the-onion-architecture-part-1/">Onion Architecture</a> от Jeffrey Palermo</li>
+<li><a href="https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html">Screaming Architecture</a> из блога Robert Martin</li>
+<li><a href="http://www.amazon.com/Lean-Architecture-Agile-Software-Development/dp/0470684208/">DCI</a> от James Coplien и Trygve Reenskaug.</li>
+<li><a href="http://www.amazon.com/Object-Oriented-Software-Engineering-Approach/dp/0201544350">BCE</a> от Ivar Jacobson из его книги Object Oriented Software Engineering: A Use-Case Driven Approach</li>
+</ul>
+<p>Несмотря на то, что детали, предложенные в этих архитектурах сильно варьируются,
+все же, они очень похожи.</p>
+<p>Все они разбивают проблему на схожие задачи. Они все добиваются этого разделения
+разложением кода на слои. Каждая имеет как минимум один слой для бизнес логики
+и другой - для интерфейсов.</p>
+<p>Каждая из этих архитектур создает систему, которая:</p>
+<ol>
+<li>Независимость от фреймворка. Архитектура не должна зависеть от какого-либо
+фреймворка или библиотеки, релиазующей какую-либо фичу. Такой подход позволяет
+использовать фреймворки как инструмент, нежели, подгонять ваш код под возможности фреймворка.</li>
+<li>Тестируемость. Бизнес-логика должна быть тестируема без UI, баз данных,
+веб-сервисов и прочих сторонник элементов.</li>
+<li>Независимость от UI. Должна быть возможность легко изменить UI без затрагивания
+других частей системы. Веб интерфейс может быть заменен на консольный без изменения бизнес-логики.</li>
+<li>Независимость от Базы Данных. Должна быть возможность заменить Oracle или
+SQL Server на Mongo, BigTable, CouchDB или что-либо еще. Бизнес-логика не зависит от Базы Данных</li>
+<li>Независимость от внешних сервисов. Бизнес-логика просто не знает о существовании чего-либо во внешнем мире.</li>
+</ol>
+<p>На диаграме представлена попытка изобразить общую концепцию представленных архитектур.</p>
+<h2 id="dependencyrule">Правило зависимости (Dependency rule)</h2>
+<section aria-labelledby="dependencyrule">
+<p>Каждый слой на диаграме представляет разный слой кода. В целом, чем глубже
+вы двигаетесь внутрь диаграмы, тем на более высокий уровень абстракции попадаете.
+Внешние слои это реализация, внутренние - правила.</p>
+<p>Основное правило, благодаря которому эта архитектура работает - Правило Зависимости.
+Правило звучит так: внешние слои знают о внутренних, но не наоборот. Н
+ичего из внутреннего слоя не должно знать о существовании внешнего.
+В частности, имена, объявленные во внешних слоях не должны даже упоминаться во
+внутренних. Это касается функций, классов, переменных и любых других сущностей.</p>
+<p>Точно также, форматы данных, используемые во внешних слоях не должны быть
+использованы где-либо во внутренних слоях. Особенно, если эти данные
+сгенерированы фреймворком, используемым во внешних слоях. Мы не хотим никаким
+образом влиять на внутренние слои из внешних.</p>
+</section>
+<h2 id="">Слои</h2>
+<section aria-labelledby="">
+</section>
+<h3 id="entities">Entities</h3>
+<section aria-labelledby="entities">
+<p>Entities содержат бизнес-логику используемую во всем приложении. Entities может
+быть объектом с методами или может быть просто набором структур данных и функций.
+Не имеет значения, в каком виде представлена Entity, пока она может быть
+использована различными модулями проекта.</p>
+<p>Если вы разрабатываете одно небольшое приложение, то Entities являются
+бизнес-объектами этого приложения. Они содержат в себе основную высокоуровневую
+логику. При каких-либо внешних изменениях, Entities - последнее, чего могут
+коснуться эти изменения. Например, изменения навигации или настроек безопасности
+никак не должны повлиять на них. Ни одно изменение модуля приложения не должно
+затронуть Entities.</p>
+</section>
+<h3 id="usecases">Use Cases</h3>
+<section aria-labelledby="usecases">
+<p>Код этого уровня содержит бизнес-правила конкретного приложения. Он содержит и
+реализовывает все возможные варианты использования системы. Use cases отвечают за
+поток данных в/из Entities и используют Entities для выполнения необходимых действий.</p>
+<p>Изменения этого слоя не должны влиять на Entities. Также, изменения внених слоев,
+таких как, Базы Данных, никак не должны влиять на Use Cases.</p>
+<p>Однако, код Use Cases будет изменен при изменении логики работы приложения. Если
+изменится какой-либо случай использования приложения, эти изменения будут
+реализованы в этом слое.</p>
+</section>
+<h3 id="interfaceadapters">Interface Adapters</h3>
+<section aria-labelledby="interfaceadapters">
+<p>Этот слой представляет из себя набор адаптеров, которые конвертируют данные, из
+формата, который удобен для использования в Entities и Use Cases в формат, более
+удобный для внешних сервисов, таких как Базы Данных или Web-сервисы. Например,
+в этом слое должен содержаться полностью весь GUI MVC. Контроллеры, Презентеры,
+Представления, все находится здесь. Модели, пожалуй, это всего лишь структуры
+данных, которые передаются из Контролеров в Use Cases и обратно из Use Cases в
+Представления и Презентеры.</p>
+<p>По аналогии, в этом слое данные должны быть конвертированы из формата, удобного
+для использования в Entities и Use Cases в форматы, удобные для хранения, например
+в Базах Данных. Код изнутри этого слоя не должен что-либо знать о Базах Данных.
+Если используется SQL база данных, то все SQL запросы должны быть обработаны именно
+на уровне этого слоя.</p>
+<p>Также, в этом слое должны находиться все другие возможные адаптеры, конвертирующие
+данные в формат удобный для использования в любых других внешних сервисах и
+наоборот в форматы, используемые в Entities и Use Cases.</p>
+</section>
+<h3 id="frameworksanddrivers">Frameworks and Drivers</h3>
+<section aria-labelledby="frameworksanddrivers">
+<p>Самый дальний, внешний слой, состоящий из фреймворков и различных инструментов,
+таких как Базы Данных, Web-сервисы. В общем, вы не должны писать здесь много кода,
+кроме связующего кода с внутренними слоями.</p>
+<p>На этом слое реализованы все детали. Связь с Web-сервисами - это детали. Базы
+Данных - это детали. Мы оставили все это снаружи, чтобы не причинять вреда внутренним слоям.</p>
+</section>
+<h2 id="-1">И это все?</h2>
+<section aria-labelledby="-1">
+<p>Нет. Эти слои - схематичны. Вероятно, вам понадобится что-либо, не вписывающие
+в эти четыре слоя. Нет такого правила, которое говорит, что вы должны использовать
+только эти четыре слоя. Однако, Правило Зависимостей (Dependency Rule) должно
+выполняться всегда. Исходный код на любом слое должны ссылаться на внутренний.
+При движение вовнутрь, уровень абстракции увеличивается. Внешний слой - низкоуровневая
+реализация деталей. Чем дальше вы продвигаетесь вовнутрь, тем более абстрактным
+становится код и более высокоуровневую логику реализовывает. Самый внутренний слой
+отвечает за общую логику.</p>
+</section>
+<h2 id="-2">Пересечение границ слоев</h2>
+<section aria-labelledby="-2">
+<p>На диаграмме справа-снизу представлено, как можно пересечь границы слоя. Там показано,
+как Контроллеры и Представления общаются с Use Cases. Обратите внимание на поток
+управления. Он начинается в Контроллере, проходит через Use Case и заканчивается
+в Презентере. Также обратите внимание на зависимости исходного кода. Каждый из них
+указывает на Use Case.</p>
+<p>Обычно мы решает это противоречие при помощи Принципа Инверсии Зависимостей.
+В таких языках, как Java, мы должны настроить интерфейсы и наследования, так,
+чтобы зависимости исходного кода были противоположны потоку управления в точках
+пересечения границ слоев.</p>
+<p>Допустим, Use Case должен обратиться к Презентеру. Это обращение не должно быть
+реализовано напрямую, чтобы не нарушать Правило Зависимостей (Dependency Rule):
+внутренние слои не должны знать о реализации внешних. В таком случае, Use Case
+обратится к интерфейсу (изображено на диаграмме как Use Case Output Port) внутреннего
+слоя, а Презентер из внешнего слоя должен его реализовать.</p>
+<p>Подобная техника используется для пересечения остальных границ архитектуры.
+Мы используем преумещества динамического полиморфизма, чтобы зависимости исходного
+кода были противоположны потоку управления. Таким образом мы не нарушаем правило
+зависимостей (Dependency Rule) вне зависимости от направления потока управления.</p>
+</section>
+<h2 id="-3">Какие данные должны пересекать границы</h2>
+<section aria-labelledby="-3">
+<p>Обычно, данные, пересекаемые границы, являются обычными структурами данных.
+Вы можете пользоваться основными структурами или Data Transfer объектами. Или
+данные могут быть аргументами вызова функций. Или вообще можно представлять данные
+в виде hashmap или засунуть в объект. Важно, чтобы данные, пересекаемые границы,
+были простыми и изолированными. Мы же не хотим читерить и передавать Entities или
+строки из Базы Данных. Также передаваемые данные не должны иметь какие-либо
+зависимости и нарушать правило зависимостей (Dependency Rule).</p>
+<p>Например, множество фреймворков возвращает из Базы Данных данные в очень удобном
+формате. Назовем это RowStructure. Однако нельзя передавать RowStructure через
+границы слоев. Это нарушает правило зависимостей (Dependency Rule) потому что
+таким образом мы можем дать внутреннему слою информацию о реализации и структуре
+используемых данных внешнего.</p>
+<p>В общем, при передаче данных через границу, они должны быть представлены в формате,
+наиболее удобном для использования во внутреннем слое.</p>
+</section>
+<h2 id="-4">В нашем случае</h2>
+<section aria-labelledby="-4">
+<p>Следовать этим простым правилам не так сложно, однако это сохранит вас от головной
+боли в будущем. Разделением кода на слои и следованием правилу зависимостей
+(Dependency Rule) можно создать систему, которая будет действительно тестируемой
+со всеми вытекающими из этого плюсами. Если какая-то внешняя часть системы устареет
+(например, База Данных или фреймворк), заменить его будет достаточно легко без каких-либо проблем.</p>
+<p>На первый взгляд, <em>Clean Architecture</em> – довольно простой набор рекомендаций
+к построению приложений. Но и я, и многие мои коллеги, осознали эту архитектуру не сразу.
+<b>Ниже мы попытаемся лучше понять Clean Architecture и избавиться от распространенных заблуждений</b>.</p>
+<p>Сразу хочу оговориться, заблуждения – это дело личное. Каждый в праве заблуждаться.
+И если это его устраивает, то я не хочу мешать. Но всегда хорошо услышать мнения других людей,
+а зачастую люди не знают даже мнений тех, кто стоял у истоков.</p>
+</section>
+<h3 id="-5">Истоки</h3>
+<section aria-labelledby="-5">
+<p>В 2011 году <a href="https://en.wikipedia.org/wiki/Robert_C._Martin">Robert C. Martin</a>,
+также известный как Uncle Bob, опубликовал статью <a href="https://8thlight.com/blog/uncle-bob/2011/09/30/Screaming-Architecture.html">Screaming Architecture</a>,
+в которой говорится, что архитектура должна «кричать» о самом приложении, а не о том,
+какие фреймворки в нем используются. Позже вышла <a href="https://8thlight.com/blog/uncle-bob/2011/11/22/Clean-Architecture.html">статья</a>,
+в которой Uncle Bob даёт отпор высказывающимся против идей чистой архитектуры.
+А в 2012 году он опубликовал статью «<a href="https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html">The Clean Architecture</a>»,
+которая и является основным описанием этого подхода. Кроме этих статей я также
+очень рекомендую посмотреть видео выступления Дяди Боба.</p>
+<p>Оригинальная схема из статьи, которая первой всплывает в голове разработчика,
+когда речь заходит о Clean Architecture представлена под заголовком страницы.</p>
+<p>В Android-сообществе Clean стала быстро набирать популярность после статьи
+<a href="https://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/">Architecting Android...The clean way?</a>,
+написанной Fernando Cejas. В этой статье Fernando приводит такую схему слоёв:</p>
+<p><img src="/images/puremvc/clean-arch/9ac65cf9ba3849db8532914040bd89b8.png" alt="android-the-clean-way" /></p>
+<p>То, что на этой схеме другие слои, а в domain слое лежат ещё какие-то Interactors
+и Boundaries, сбивает с толку. Оригинальная картинка тоже не всем понятна.
+В статьях многое неоднозначно или слегка абстрактно. А видео не все смотрят
+(обычно из-за недостаточного знания английского). И вот, из-за недопонимания,
+люди начинают что-то выдумывать, усложнять, заблуждаться...</p>
+</section>
+<h2 id="-6">Давайте разбираться!</h2>
+<section aria-labelledby="-6">
+<p>Clean Architecture объединила в себе идеи нескольких других архитектурных подходов,
+которые сходятся в том, что архитектура должна:</p>
+<ul>
+<li>быть тестируемой;</li>
+<li>не зависеть от UI;</li>
+<li>не зависеть от БД, внешних фреймворков и библиотек.</li>
+</ul>
+<p>Это достигается разделением на слои и следованием Dependency Rule (правилу зависимостей).</p>
+</section>
+<h2 id="dependencyrule-1">Dependency Rule</h2>
+<section aria-labelledby="dependencyrule-1">
+<p><b>Dependency Rule говорит нам, что внутренние слои не должны зависеть от внешних</b>.
+То есть наша бизнес-логика и логика приложения не должны зависеть от презентеров, UI,
+баз данных и т.п. На оригинальной схеме это правило изображено стрелками, указывающими внутрь.</p>
+<p>В статье сказано: имена сущностей (классов, функций, переменных, чего угодно),
+объявленных во внешних слоях, не должны встречаться в коде внутренних слоев.</p>
+<p>Это правило позволяет строить системы, которые будет проще поддерживать, потому
+что изменения во внешних слоях не затронут внутренние слои.</p>
+</section>
+<h2 id="-7">Слои</h2>
+<section aria-labelledby="-7">
+<p>Uncle Bob выделяет 4 слоя:</p>
+<ul>
+<li>Entities. Бизнес-логика общая для многих приложений.</li>
+<li>Use Cases (Interactors). Логика приложения.</li>
+<li>Interface Adapters. Адаптеры между Use Cases и внешним миром. Сюда попадают
+Presenter'ы из MVP, а также Gateways (более популярное название репозитории).</li>
+<li>Frameworks. Самый внешний слой, тут лежит все остальное: UI, база данных, http-клиент, и т.п.</li>
+</ul>
+<p>Подробнее, что из себя представляют эти слои, мы рассмотрим по ходу. А пока остановимся на передаче данных между ними.</p>
+</section>
+<h2 id="-8">Переходы</h2>
+<section aria-labelledby="-8">
+<p><b>Переходы между слоями осуществляются через Boundaries</b>, то есть через два
+интерфейса: один для запроса и один для ответа. Их можно увидеть справа на
+оригинальной схеме (Input/OutputPort). Они нужны, чтобы внутренний слой не
+зависел от внешнего (следуя Dependency Rule), но при этом мог передать ему данные.</p>
+<p><img src="/images/puremvc/clean-arch/afbef2e40b7b4f87939dcde0b1ab6bae.png" alt="Flow of control" /></p>
+<p>Оба интерфейса относятся к внутреннему слою (обратите внимание на их цвет на картинке).</p>
+<p>Смотрите, Controller вызывает метод у InputPort, его реализует UseCase, а затем
+UseCase отдает ответ интерфейсу OutputPort, который реализует Presenter. То есть
+данные пересекли границу между слоями, но при этом все зависимости указывают
+внутрь на слой UseCase'ов.</p>
+<p><em>Чтобы зависимость была направлена в сторону обратную потоку данных</em>, применяется
+<a href="https://en.wikipedia.org/wiki/Dependency_inversion_principle">принцип инверсии зависимостей</a>
+(буква D из аббревиатуры <a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a>). То есть, вместо
+того чтобы UseCase напрямую зависел от Presenter'a (что нарушало бы Dependency Rule),
+он зависит от интерфейса в своём слое, а Presenter должен этот интерфейс реализовать.</p>
+<p>Точно та же схема работает и в других местах, например, при обращении UseCase к
+Gateway/Repository. Чтобы не зависеть от репозитория,
+выделяется интерфейс и кладется в слой UseCases.</p>
+<p>Что же касается данных, которые пересекают границы, то это должны быть <b>простые структуры</b>.
+Они могут передаваться как <a href="https://en.wikipedia.org/wiki/Data_transfer_object">DTO</a>
+или быть завернуты в HashMap, или просто быть аргументами при вызове метода.
+Но они обязательно должны быть в форме более удобной для внутреннего слоя (лежать во внутреннем слое).</p>
+</section>
+<h2 id="-9">Особенности мобильных приложений</h2>
+<section aria-labelledby="-9">
+<p>Надо отметить, что <b>Clean Architecture была придумана с немного иным типом
+приложений на уме</b>. Большие серверные приложения для крупного бизнеса, а не
+мобильные клиент-серверные приложения средней сложности, которые не нуждаются
+в дальнейшем развитии (конечно, бывают разные приложения, но согласитесь, в
+большей массе они именно такие). Непонимание этого может привести к <a href="https://en.wikipedia.org/wiki/Overengineering">overengineering'у</a>.</p>
+<p>На оригинальной схеме есть слово Controllers. Оно появилось на схеме из-за
+frontend'a, в частности из Ruby On Rails. Там зачастую разделяют Controller,
+который обрабатывает запрос и отдает результат, и Presenter, который выводит
+этот результат на View. Многие не сразу догадываются,
+но <em>в android-приложениях Controllers не нужны</em>.</p>
+<p>Ещё в статье Uncle Bob говорит, что <em>слоёв</em> не обязательно <em>должно быть 4</em>.
+Может быть любое количество, но Dependency Rule должен всегда применяться.</p>
+<p>Глядя на схему из статьи Fernando Cejas, можно подумать, что автор воспользовался
+как раз этой возможностью и уменьшил количество слоев до трёх. Но это не так.
+Если разобраться, то в Domain Layer у него находятся как Interactors (это другое
+название UseCase'ов), так и Entities.</p>
+<p>Все мы благодарны Fernando за его статьи, которые дали хороший толчок развитию
+Clean в Android-сообществе, но его схема также породила и заблуждение.</p>
+</section>
+<h2 id="-10">Слои и линейность</h2>
+<section aria-labelledby="-10">
+<p>Сравнивая оригинальную схему от Uncle Bob'a и cхему Fernando Cejas'a многие начинают
+путаться. Линейная схема воспринимается проще, и люди начинают неверно понимать
+оригинальную. А не понимая оригинальную, начинают неверно толковать и линейную.
+Кто-то думает, что расположение надписей в кругах имеет сакральное значение,
+или что надо использовать Controller, или пытаются соотнести названия слоёв на
+двух схемах. <b>Смешно и грустно, но основные схемы стали основными источниками заблуждения</b>!</p>
+<p>Постараемся это исправить. Для начала давайте <em>очистим основную схему</em>,
+убрав из нее лишнее для нас. И переименуем Gateways в Repositories,
+т.к. это более распространенное название этой сущности.</p>
+<p><img src="/images/puremvc/clean-arch/42cf44b37d614d2785444057af7273e8.png" alt="cicles schema" /></p>
+<p>Стало немного понятнее. Теперь мы сделаем вот что: <em>разрежем слои на части</em> и превратим
+эту схему в блочную, где цвет будет по-прежнему обозначать принадлежность к слою.</p>
+<p><img src="/images/puremvc/clean-arch/fe8c82a32b1548b1a297187e24ae755a.png" alt="cicles-liner schema" /></p>
+<p>Как я уже сказал выше, цвета обозначают слои. А стрелка внизу обозначает Dependency Rule.</p>
+<p>На получившейся схеме уже проще представить себе течение данных от UI к БД или серверу
+и обратно. Но давайте сделаем еще один шаг к линейности, расположив слои <em>по категориям</em>:</p>
+<p><img src="/images/puremvc/clean-arch/9869dbe34b5649e28be40bff6bee3147.png" alt="liner schema" /></p>
+<p>Я намеренно не называю это разделение слоями, в отличие от Fernando Cejas. Потому что
+мы и так делим слои. Я называю это категориями или частями. Можно назвать как угодно,
+но повторно использовать слово «слои» не стоит.</p>
+<p>А теперь давайте сравним то, что получилось, со схемой Fernando.</p>
+<p><img src="/images/puremvc/clean-arch/cbe3fdad2be24de3bd4dda6c66d56d76.png" alt="two liner schemas" /></p>
+<p>Надеюсь теперь вcё начало вставать на свои места. Выше я говорил, что, по моему мнению,
+у Fernando всё же 4 слоя. Думаю теперь это тоже стало понятнее. В Domain части
+у нас находятся и UseCases и Entities.</p>
+<p>Такая схема воспринимается проще. Ведь обычно события и данные в наших приложениях
+ходят от UI к backend'у или базе данных и обратно. Давайте изобразим этот процесс:</p>
+<p><img src="/images/puremvc/clean-arch/53104c89d9cf44a59c95e351b7485574.png" alt="both schema" /></p>
+<p>Красными стрелками показано <em>течение данных</em>.</p>
+<p>Событие пользователя идет в Presenter, тот передает в Use Case. Use Case делает
+запрос в Repository. Repository получает данные где-то, создает Entity, передает
+его в UseCase. Так Use Case получает все нужные ему Entity. Затем, применив их и
+свою логику, получает результат, который передает обратно в Presenter. А тот, в
+свою очередь, отображает результат в UI.</p>
+<p>На переходах между слоями (не категориями, а слоями, отмеченными разным цветом)
+используются Boundaries, описанные ранее.</p>
+<p>Теперь, когда мы <b>поняли, как соотносятся две схемы</b>, давайте рассмотрим
+следующее заблуждение.</p>
+</section>
+<h2 id="-11">Слои, а не сущности</h2>
+<section aria-labelledby="-11">
+<p>Как понятно из заголовка, кто-то думает, что на схемах изображены сущности (особенно
+это затрагивает UseCases и Entities). Но это не так.</p>
+<p><b>На схемах изображены слои, в них может находиться много сущностей</b>. В них будут
+находиться интерфейсы для переходов между слоями (Boundaries), различные DTO, основные
+классы слоя (Interactors для слоя UseCases, например).</p>
+<p>Не будет лишним взглянуть на схему, собранную из частей, показанных в видео выступления
+Uncle Bob'a. На ней изображены <em>классы и зависимости</em>:</p>
+<p><img src="/images/puremvc/clean-arch/bb3430769e6c4e8fbca757a8bc071f2e.png" alt="classes and dependencies" /></p>
+<p>Видите двойные линии? Это границы между слоями. Разделение между слоями Entities
+и UseCases не показаны, так как в видео основной упор делался на том, что вся
+логика (приложения и бизнеса) отгорожена от внешнего мира.</p>
+<p>C Boundaries мы уже знакомы, интерфейс Gateway – это то же самое.
+Request/ResponseModel – просто DTO для передачи данных между слоями. По правилу
+зависимости они должны лежать во внутреннем слое, что мы и видим на картинке.</p>
+<p>Про Controller мы тоже уже говорили, он нас не интересует. Его функцию у нас
+выполняет Presenter.</p>
+<p>А ViewModel на картинке – это не ViewModel из <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel">MVVM</a>
+и не ViewModel из <a href="https://developer.android.com/topic/libraries/architecture/viewmodel.html">Architecture Components</a>.
+Это просто DTO для передачи данных View, чтобы View была тупой и просто сетила
+свои поля. Но это уже детали реализации и будет зависеть от выбора презентационного
+паттерна и личных подходов.</p>
+<p>В слое UseCases находятся не только Interactor'ы, но также и Boundaries для работы
+с презентером, интерфейс для работы с репозиторием, DTO для запроса и ответа.
+<em>Отсюда можно сделать вывод, что на оригинальной схеме отражены всё же слои</em>.</p>
+</section>
+<h2 id="entities-1">Entities</h2>
+<section aria-labelledby="entities-1">
+<p><em>Entities по праву занимают первое место по непониманию.</em></p>
+<p>Мало того, что почти никто (включая меня до недавнего времени) не осознает,
+что же это такое на самом деле, так их ещё и путают с DTO.</p>
+<pre><code>Однажды в чате возник спор, в котором оппонент доказывал, что Entity – это объекты,
+полученные после парсинга JSON в data-слое, а DTO – объекты, которыми оперируют Interactor'ы...
+</code></pre>
+<p>Постараемся хорошо разобраться, чтобы таких заблуждений больше не было ни у кого.</p>
+<p>Что же такое Entities?</p>
+<p>Чаще всего они воспринимаются как POJO-классы, с которыми работают Interactor'ы.
+Но это не так. По крайней мере не совсем.</p>
+<p>В статье Uncle Bob говорит, что <b>Entities инкапсулируют логику бизнеса</b>,
+<em>то есть всё то, что не зависит от конкретного приложения, а будет общим для многих</em>.
+Но если у вас отдельное приложение и оно не заточено под какой-то существующий бизнес,
+то Entities будут являться <em>бизнес-объектами приложения, содержащими самые
+общие и высокоуровневые правила</em>.</p>
+<p>Я думаю, что именно фраза: «Entities это бизнес объекты», – запутывает больше всего.
+Кроме того, на приведенной выше схеме из видео Interactor получает Entity из Gateway.
+Это также подкрепляет ощущение, что это просто POJO объекты.</p>
+<p>Но в статье также говорится, что <em>Entity может быть объектом с методами или
+набором структур и функций</em>. То есть упор делается на то, что важны методы, а не данные.</p>
+<p>Это также подтверждается в <a href="https://groups.google.com/forum/#!topic/clean-code-discussion/mvP_NR2MUPc">разъяснении</a>
+от Uncle Bob'а, которое я нашел недавно:</p>
+<p>Uncle Bob говорит, что для него Entities содержат бизнес-правила, независимые от приложения.
+И они <em>не просто объекты с данными. Entities могут содержать ссылки на объекты
+с данными, но основное их назначение в том, чтобы реализовать методы бизнес-логики,
+которые могут использоваться в различных приложениях</em>.</p>
+<p>А по-поводу того, что Gateways возвращают Entities на картинке, он поясняет следующее:</p>
+<p>Реализация Gаteway получает данные из БД, и использует их, чтобы создать структуры
+данных, которые будут переданы в Entities, которые Gateway вернет. Реализовано это может быть композицией</p>
+<pre><code class="java language-java">class MyEntity { private MyDataStructure data;}
+</code></pre>
+<p>или наследованием</p>
+<pre><code class="java language-java">class MyEntity extends MyDataStructure {...}
+</code></pre>
+<p>И в конце ответа фраза, которая меня очень порадовала:</p>
+<pre><code>And remember, we are all pirates by nature; and the rules I'm talking about here
+are really more like guidelines...
+(И запомните: мы все пираты по натуре, и правила, о которых я говорю тут,
+на самом деле, скорее рекомендации...)
+</code></pre>
+<p>Действительно, не надо слишком буквально всё воспринимать, надо искать компромиссы и не делать лишнего. Все-таки любая архитектура призвана помогать, а не мешать.</p>
+<p>Итак, <b>слой Entities содержит</b>:</p>
+<ul>
+<li>Entities – функции или объекты с методами, которые реализуют логику бизнеса, общую для многих приложений (а если бизнеса нет, то самую высокоуровневую логику приложения);</li>
+<li>DTO, необходимые для работы и перехода между слоями.</li>
+</ul>
+<p>Кроме того, когда приложение отдельное, то надо стараться находить и выделять в Entities высокоуровневую логику из слоя UseCases, где зачастую она оседает по ошибке.</p>
+</section>
+</div>
+
+<footer id="ember15074" class="ember-view">  <a href="/release/puremvc/solid" id="ember15075" class="previous-guide ember-view">SOLID</a>
+
+<a href="/release/puremvc/dependency-inversion" id="ember15076" class="next-guide ember-view">      Dependency inversion
+    </a></footer>
+</article>
+
+
+</main>
+
+<footer id="ember105" class="es-footer ember-view" role="contentinfo">
+  <div class="footer responsive">
+    <div class="container space-between">
+      <div id="ember106" class="footer-info flex-1">
+        Denis Trayzhon and SAIFAS LLC © 2021
+      </div>
+      <div id="ember114" class="footer-statement footer-social">
+            <a href="http://twitter.com/real_ate" target="_blank" title="Twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1000">
+                <path d="M939.5 227.941q-37 54-90 93v23q0 73-21 145t-64 139q-43 67-103 117t-144 82q-84 32-181 30-151 0-276-81 19 2 43 2 126 0 224-77-59-1-105-36t-64-89q19 3 34 3 24 0 48-6-63-13-104-62t-41-115v-2q38 21 82 23-37-25-59-64t-22-86q0-49 25-91 68 83 164 133t208 55q-5-21-5-41 0-75 53-127t127-53q79 0 132 57 61-12 115-44-21 64-80 100 52-6 104-28z"></path>
+              </svg>
+            </a>
+            <a href="https://github.com/LeanSDK/leanes" target="_blank" title="GitHub">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 1000">
+                <path d="M392 643q0 22-7 45t-24 43q-17 20-40 19t-41-19q-18-18-24-43t-7-45q-1-20 7-46t24-43q16-17 41-19t40 19q15 21 24 43t7 46zm357 0q0 22-7 45t-24 43q-17 20-40 19t-41-19q-18-18-24-43t-7-45q-1-20 7-46t24-43q16-17 41-19t40 19q15 21 24 43t7 46zm90 0q0-67-39-114t-104-47q-23 0-109 12-40 6-88 6t-87-6q-85-12-109-12-66 0-104 47t-39 114q0 49 18 85t45 58q27 22 68 33t78 17q37 6 83 4h94q46 0 83-4t78-17q41-13 69-33t45-58q17-38 18-85zm125-99q0 116-34 185-22 43-59 74t-79 48q-42 17-95 27t-96 12q-43 2-93 3-43 0-79-2t-82-7q-46-5-85-17t-77-29q-38-17-67-45t-48-64q-35-69-35-185 0-132 76-221-15-45-15-95 0-64 28-121 61 0 106 22t106 69q82-20 172-20 83 0 157 18 58-46 104-67t105-22q29 57 29 121 0 49-15 94 76 89 76 222z"></path>
+              </svg>
+            </a>
+            <a href="<insert link here>" title="Discord">
+              <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 245 240">
+                <path d="M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zm36.5 0c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z"></path>
+                <path class="st0" d="M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z"></path>
+              </svg>
+            </a>
+      </div>
+      <div id="ember118" class="footer-info flex-1 text-align-right">
+        Built with <a href="https://github.com/empress/guidemaker" target="_blank">Guidemaker</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script type="x/boundary" id="fastboot-body-end"></script>
+
+    <script src="/assets/vendor-9810575d7703ae25fa81beb43e2fecce.js"></script>
+    <script src="/assets/@leansdk/leanes-documentation-a0f5fbd371a93ddc8a194722acd991c7.js"></script>
+
+    <div id="ember-basic-dropdown-wormhole"></div>
+  </body>
+</html>

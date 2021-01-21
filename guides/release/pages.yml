@@ -78,6 +78,8 @@
       url: "mediators"
     - title: "Proxies"
       url: "proxies"
+    - title: "SOLID"
+      url: "solid"
     - title: "Clean Architecture Entities"
       url: "clean-arch-entities"
     - title: "Dependency inversion"

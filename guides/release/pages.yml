@@ -84,6 +84,8 @@
       url: "clean-arch"
     - title: "Dependency inversion"
       url: "dependency-inversion"
+    - title: "InversifyJS"
+      url: "inversify"
 - title: "Multitones & Pipes"
   url: pipes
   pages:

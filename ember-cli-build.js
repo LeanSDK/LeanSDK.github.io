@@ -22,7 +22,6 @@ module.exports = function (defaults) {
         'ruby',
         'scss',
         'java',
-        'xml'
       ],
 
       plugins: ['line-numbers', 'normalize-whitespace']
